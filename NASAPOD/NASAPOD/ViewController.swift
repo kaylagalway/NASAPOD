@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var viewFullImageButton: UIButton!
     @IBOutlet weak var podLabel: UILabel!
     
+    @IBOutlet weak var savePhotoButton: UIButton!
     @IBOutlet weak var clickImageLabel: UILabel!
     @IBOutlet weak var showTextButton: UIButton!
     override func viewDidLoad() {
@@ -40,23 +41,7 @@ class ViewController: UIViewController {
             self.performSelectorOnMainThread(#selector(ViewController.updateInfoText(_:)), withObject: infoString, waitUntilDone: true)
         }
     }
-
-/*
-    @IBAction func viewFullImageTapped(sender: AnyObject) {
-        UIView.animateWithDuration(0.5, animations: {
-            self.bannerLabel.alpha = 0
-            self.titleLabel.alpha = 0
-            self.infoTextview.alpha = 0
-            self.podLabel.alpha = 0
-            self.viewFullImageButton.alpha = 0
-            self.showTextButton.layer.borderWidth = 2
-            self.showTextButton.layer.borderColor = self.showTextButton.titleLabel?.textColor.CGColor
-            self.showTextButton.layer.cornerRadius = 15
-            self.showTextButton.alpha = 1
-        })
-    }
-*/
-
+    
     @IBAction func showTextButtonTapped(sender: AnyObject) {
         UIView.animateWithDuration(0.5, animations: {
             self.bannerLabel.alpha = 0
@@ -64,14 +49,18 @@ class ViewController: UIViewController {
             self.infoTextview.alpha = 0
             self.podLabel.alpha = 0
             self.showTextButton.alpha = 0
+            self.savePhotoButton.alpha = 0
         })
-        
-        UIView.animateWithDuration(0.75, delay: 1.0, options:.CurveEaseIn, animations: {
+        UIView.animateWithDuration(0.75, delay: 0.5, options:.CurveEaseIn, animations: {
             self.clickImageLabel.alpha = 1
-            self.clickImageLabel.alpha = 0
-            
         }) { (Bool) in
+            UIView.animateWithDuration(0.5, delay: 1.0, options: .CurveEaseOut, animations: { 
+                self.clickImageLabel.alpha = 0
+                }, completion: { (Bool) in
+            })
         }
+
+        
         
         self.imageFromToday.userInteractionEnabled = true
         //now you need a tap gesture recognizer
@@ -90,21 +79,22 @@ class ViewController: UIViewController {
             self.infoTextview.alpha = 1
             self.podLabel.alpha = 1
             self.showTextButton.alpha = 1
+            self.savePhotoButton.alpha = 1
         })
         let tappedImageView = gestureRecognizer.view!
     }
     
-/*
- @IBAction func showTextButtonTapped(sender: AnyObject) {
- UIView.animateWithDuration(0.5, animations: {
- self.bannerLabel.alpha = 1
- self.titleLabel.alpha = 1
- self.infoTextview.alpha = 1
- self.podLabel.alpha = 1
- self.viewFullImageButton.alpha = 1
- self.showTextButton.alpha = 0
- })
- }*/
+    @IBAction func savePhotoButtonTapped(sender: AnyObject) {
+        
+        UIImageWriteToSavedPhotosAlbum(self.imageFromToday.image!, self, Selector("image:didFinishSavingWithError:contextInfo:"), nil)
+    }
+    
+    func image(image: UIImage, didFinishSavingWithError error: NSErrorPointer, contextInfo: UnsafePointer<()>) {
+        dispatch_async(dispatch_get_main_queue(), {
+            UIAlertView(title: "Success", message: "Today's picture of the day has been saved to your Camera Roll successfully", delegate: nil, cancelButtonTitle: "Close").show()
+        })
+    }
+    
     func updateMainPhoto(pictureURL: NSURL) {
         let pictureData = NSData(contentsOfURL: pictureURL)
         imageFromToday.image = UIImage(data: pictureData!)
@@ -120,22 +110,12 @@ class ViewController: UIViewController {
         self.showTextButton.layer.borderWidth = 2
         self.showTextButton.layer.borderColor = self.showTextButton.titleLabel?.textColor.CGColor
         self.showTextButton.layer.cornerRadius = 15
-//        self.viewFullImageButton.alpha = 1
+        
+        self.savePhotoButton.alpha = 1
+        self.savePhotoButton.layer.borderWidth = 2
+        self.savePhotoButton.layer.borderColor = self.showTextButton.titleLabel?.textColor.CGColor
+        self.savePhotoButton.layer.cornerRadius = 15
     }
-    
-    
-    //        var url:NSURL = NSURL.URLWithString("http://myURL/ios8.png")
-    //        var data:NSData = NSData.dataWithContentsOfURL(url, options: nil, error: nil)
-    //
-    //        imageView.image = UIImage.imageWithData(data)// Error here
-    //        Try this imageURL.image = UIImage(data: myDataVar)
-    /*
- func updateIPLabel(text: String) {
- self.ipLabel.text = "Your IP is " + text
- }
- 
- func updatePostLabel(text: String) {
- self.postResultLabel.text = "POST : " + text
- }*/
+
 }
 

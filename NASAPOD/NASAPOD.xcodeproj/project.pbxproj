@@ -14,6 +14,9 @@
 		CDE634FC1CD1A33300A9088F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDE634FA1CD1A33300A9088F /* LaunchScreen.storyboard */; };
 		CDE635071CD1A33300A9088F /* NASAPODTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE635061CD1A33300A9088F /* NASAPODTests.swift */; };
 		CDE635121CD1A33300A9088F /* NASAPODUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE635111CD1A33300A9088F /* NASAPODUITests.swift */; };
+		CDE635251CD1A5A100A9088F /* KGPODDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE635241CD1A5A100A9088F /* KGPODDataSource.swift */; };
+		CDE635271CD1A5AE00A9088F /* KGPODAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE635261CD1A5AE00A9088F /* KGPODAPI.swift */; };
+		CDE635291CD1AA3B00A9088F /* KGPODInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE635281CD1AA3B00A9088F /* KGPODInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		CDE6350D1CD1A33300A9088F /* NASAPODUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NASAPODUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE635111CD1A33300A9088F /* NASAPODUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAPODUITests.swift; sourceTree = "<group>"; };
 		CDE635131CD1A33300A9088F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDE635241CD1A5A100A9088F /* KGPODDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KGPODDataSource.swift; sourceTree = "<group>"; };
+		CDE635261CD1A5AE00A9088F /* KGPODAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KGPODAPI.swift; sourceTree = "<group>"; };
+		CDE635281CD1AA3B00A9088F /* KGPODInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KGPODInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +104,11 @@
 			isa = PBXGroup;
 			children = (
 				CDE634F11CD1A33300A9088F /* AppDelegate.swift */,
-				CDE634F31CD1A33300A9088F /* ViewController.swift */,
+				CDE6351F1CD1A4E300A9088F /* APIClients */,
+				CDE635201CD1A51600A9088F /* DataSources */,
+				CDE635231CD1A55700A9088F /* Models */,
+				CDE635221CD1A54000A9088F /* StoryboardFiles */,
+				CDE635211CD1A53400A9088F /* ViewControllers */,
 				CDE634F51CD1A33300A9088F /* Main.storyboard */,
 				CDE634F81CD1A33300A9088F /* Assets.xcassets */,
 				CDE634FA1CD1A33300A9088F /* LaunchScreen.storyboard */,
@@ -123,6 +133,45 @@
 				CDE635131CD1A33300A9088F /* Info.plist */,
 			);
 			path = NASAPODUITests;
+			sourceTree = "<group>";
+		};
+		CDE6351F1CD1A4E300A9088F /* APIClients */ = {
+			isa = PBXGroup;
+			children = (
+				CDE635261CD1A5AE00A9088F /* KGPODAPI.swift */,
+			);
+			name = APIClients;
+			sourceTree = "<group>";
+		};
+		CDE635201CD1A51600A9088F /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				CDE635241CD1A5A100A9088F /* KGPODDataSource.swift */,
+			);
+			name = DataSources;
+			sourceTree = "<group>";
+		};
+		CDE635211CD1A53400A9088F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CDE634F31CD1A33300A9088F /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CDE635221CD1A54000A9088F /* StoryboardFiles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = StoryboardFiles;
+			sourceTree = "<group>";
+		};
+		CDE635231CD1A55700A9088F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CDE635281CD1AA3B00A9088F /* KGPODInfo.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +308,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE635271CD1A5AE00A9088F /* KGPODAPI.swift in Sources */,
+				CDE635251CD1A5A100A9088F /* KGPODDataSource.swift in Sources */,
 				CDE634F41CD1A33300A9088F /* ViewController.swift in Sources */,
 				CDE634F21CD1A33300A9088F /* AppDelegate.swift in Sources */,
+				CDE635291CD1AA3B00A9088F /* KGPODInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

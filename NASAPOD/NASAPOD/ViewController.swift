@@ -41,20 +41,20 @@ class ViewController: UIViewController {
 
 
     @IBAction func viewFullImageTapped(sender: AnyObject) {
-        UIView.animateWithDuration(1, animations: {
+        UIView.animateWithDuration(0.5, animations: {
             self.bannerLabel.alpha = 0
             self.titleLabel.alpha = 0
             self.infoTextview.alpha = 0
             self.podLabel.alpha = 0
             self.viewFullImageButton.alpha = 0
-//            self.showTextButton.layer.borderWidth = 3
-//            self.showTextButton.layer.borderColor = self.showTextButton.titleLabel?.textColor.CGColor
-//            self.showTextButton.layer.cornerRadius = 15
+            self.showTextButton.layer.borderWidth = 2
+            self.showTextButton.layer.borderColor = self.showTextButton.titleLabel?.textColor.CGColor
+            self.showTextButton.layer.cornerRadius = 15
             self.showTextButton.alpha = 1
         })
     }
     @IBAction func showTextButtonTapped(sender: AnyObject) {
-        UIView.animateWithDuration(1, animations: {
+        UIView.animateWithDuration(0.5, animations: {
         self.bannerLabel.alpha = 1
         self.titleLabel.alpha = 1
         self.infoTextview.alpha = 1

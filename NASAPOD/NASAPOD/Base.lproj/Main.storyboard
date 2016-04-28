@@ -57,9 +57,10 @@
                                     <action selector="viewFullImageTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rXv-k9-cKB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="es6-Wr-i4M" userLabel="ShowTextButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="es6-Wr-i4M" userLabel="ShowTextButton">
                                 <rect key="frame" x="554" y="561" width="22" height="22"/>
-                                <state key="normal">
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="14"/>
+                                <state key="normal" title="i">
                                     <color key="titleColor" red="0.70513465519999996" green="0.9030350774" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>

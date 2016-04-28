@@ -23,7 +23,7 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="NASA" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29H-Lf-o3v" userLabel="NASALabel">
                                 <rect key="frame" x="279" y="83" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="60"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="70"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -41,7 +41,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PICTURE OF THE DAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Waf-ww-f5l" userLabel="PODLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Picture Of The Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Waf-ww-f5l" userLabel="PODLabel">
                                 <rect key="frame" x="279" y="132" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -51,12 +51,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="msq-O6-hPM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7OU-Ke-RMh"/>
-                            <constraint firstItem="XyC-ab-pAL" firstAttribute="top" secondItem="vXx-i5-fiN" secondAttribute="bottom" constant="10" id="7Qz-dF-epK"/>
-                            <constraint firstItem="vXx-i5-fiN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="CjJ-Lz-qJj"/>
-                            <constraint firstItem="29H-Lf-o3v" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="FiE-qb-eeE"/>
-                            <constraint firstItem="XyC-ab-pAL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.85" id="J49-8p-1EM"/>
+                            <constraint firstItem="XyC-ab-pAL" firstAttribute="top" secondItem="vXx-i5-fiN" secondAttribute="bottom" constant="5" id="7Qz-dF-epK"/>
+                            <constraint firstItem="vXx-i5-fiN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="75" id="CjJ-Lz-qJj"/>
+                            <constraint firstItem="29H-Lf-o3v" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="FiE-qb-eeE"/>
+                            <constraint firstItem="XyC-ab-pAL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="J49-8p-1EM"/>
                             <constraint firstItem="Waf-ww-f5l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LTF-mx-126"/>
-                            <constraint firstItem="XyC-ab-pAL" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="-25" id="Lmh-8D-MT9"/>
+                            <constraint firstItem="XyC-ab-pAL" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="-50" id="Lmh-8D-MT9"/>
                             <constraint firstItem="vXx-i5-fiN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UGv-ou-p6V"/>
                             <constraint firstItem="Waf-ww-f5l" firstAttribute="top" secondItem="29H-Lf-o3v" secondAttribute="bottom" id="fad-oa-9wY"/>
                             <constraint firstItem="XyC-ab-pAL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gA6-ZY-08U"/>

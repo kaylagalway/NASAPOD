@@ -29,7 +29,7 @@ class ViewController: UIViewController {
             self.performSelectorOnMainThread(#selector(ViewController.updateMainPhoto(_:)), withObject: pictureURL, waitUntilDone: true)
             self.performSelectorOnMainThread(#selector(ViewController.updateTitleLabel(_:)), withObject: titleString, waitUntilDone: true)
             self.performSelectorOnMainThread(#selector(ViewController.updateInfoText(_:)), withObject: infoString, waitUntilDone: true)
-        }
+        } 
     }
 
     func updateMainPhoto(pictureURL: NSURL) {
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     }
     
     func updateTitleLabel(titleString:String) {
-        titleLabel.text = titleString
+        titleLabel.text = "\(titleString)"
     }
     
     func updateInfoText(infoTextString:String) {

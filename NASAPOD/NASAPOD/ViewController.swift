@@ -43,6 +43,9 @@ class ViewController: UIViewController {
     
     func updateInfoText(infoTextString:String) {
         infoTextview.text = infoTextString
+//        infoTextview.layer.borderColor = UIColor.grayColor().CGColor
+//        infoTextview.layer.borderWidth = 2
+//        infoTextview.layer.cornerRadius = 3.0
     }
     
     

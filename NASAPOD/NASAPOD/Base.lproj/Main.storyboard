@@ -22,23 +22,23 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="msq-O6-hPM" userLabel="ImageFromToday">
                                 <rect key="frame" x="300" y="0.0" width="0.0" height="600"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NASA" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29H-Lf-o3v" userLabel="NASALabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NASA" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29H-Lf-o3v" userLabel="NASALabel">
                                 <rect key="frame" x="203.5" y="45" width="193" height="93.5"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="80"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXx-i5-fiN" userLabel="TitleLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXx-i5-fiN" userLabel="TitleLabel">
                                 <rect key="frame" x="300" y="375" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XyC-ab-pAL" userLabel="InfoTextView">
-                                <rect key="frame" x="60" y="385" width="480" height="165"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XyC-ab-pAL" userLabel="InfoTextView">
+                                <rect key="frame" x="45" y="385" width="510" height="165"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Picture Of The Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Waf-ww-f5l" userLabel="PODLabel">
@@ -57,8 +57,8 @@
                                     <action selector="viewFullImageTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rXv-k9-cKB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="es6-Wr-i4M" userLabel="ShowTextButton">
-                                <rect key="frame" x="554" y="561" width="22" height="22"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="es6-Wr-i4M" userLabel="ShowTextButton">
+                                <rect key="frame" x="550" y="556" width="30" height="29"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="14"/>
                                 <state key="normal" title="i">
                                     <color key="titleColor" red="0.70513465519999996" green="0.9030350774" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -67,15 +67,22 @@
                                     <action selector="showTextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LyD-Ow-4sC"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Click Image To Return To Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsg-hR-7aP">
+                                <rect key="frame" x="170" y="289" width="260.5" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="18"/>
+                                <color key="textColor" red="0.70513465519999996" green="0.9030350774" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="msq-O6-hPM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7OU-Ke-RMh"/>
                             <constraint firstItem="XyC-ab-pAL" firstAttribute="top" secondItem="vXx-i5-fiN" secondAttribute="bottom" constant="10" id="7Qz-dF-epK"/>
                             <constraint firstItem="KoR-4g-TRJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8dF-eA-KaV"/>
+                            <constraint firstItem="jsg-hR-7aP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="99b-Vk-MD2"/>
                             <constraint firstItem="vXx-i5-fiN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="75" id="CjJ-Lz-qJj"/>
                             <constraint firstItem="29H-Lf-o3v" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="FiE-qb-eeE"/>
-                            <constraint firstItem="XyC-ab-pAL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="J49-8p-1EM"/>
+                            <constraint firstItem="XyC-ab-pAL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.85" id="J49-8p-1EM"/>
                             <constraint firstItem="Waf-ww-f5l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LTF-mx-126"/>
                             <constraint firstItem="XyC-ab-pAL" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="-50" id="Lmh-8D-MT9"/>
                             <constraint firstItem="vXx-i5-fiN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UGv-ou-p6V"/>
@@ -84,6 +91,7 @@
                             <constraint firstItem="XyC-ab-pAL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gA6-ZY-08U"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KoR-4g-TRJ" secondAttribute="bottom" constant="8" id="kPG-8B-7AM"/>
                             <constraint firstItem="es6-Wr-i4M" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="-15" id="lfK-9m-rk9"/>
+                            <constraint firstItem="jsg-hR-7aP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ojU-oK-cWv"/>
                             <constraint firstItem="29H-Lf-o3v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tan-9m-3tS"/>
                             <constraint firstItem="msq-O6-hPM" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="y0Q-nT-EFk"/>
                             <constraint firstItem="msq-O6-hPM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zLJ-uh-b6w"/>
@@ -91,6 +99,7 @@
                     </view>
                     <connections>
                         <outlet property="bannerLabel" destination="29H-Lf-o3v" id="Rb1-xH-eMu"/>
+                        <outlet property="clickImageLabel" destination="jsg-hR-7aP" id="SDE-U5-8uE"/>
                         <outlet property="imageFromToday" destination="msq-O6-hPM" id="caa-wK-bxD"/>
                         <outlet property="infoTextview" destination="XyC-ab-pAL" id="ATW-li-6Cu"/>
                         <outlet property="podLabel" destination="Waf-ww-f5l" id="QD9-B9-XkM"/>

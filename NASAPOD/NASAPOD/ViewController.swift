@@ -17,11 +17,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var viewFullImageButton: UIButton!
     @IBOutlet weak var podLabel: UILabel!
     
+    @IBOutlet weak var clickImageLabel: UILabel!
     @IBOutlet weak var showTextButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         viewFullImageButton.alpha = 0
-        self.showTextButton.alpha = 0
+        showTextButton.alpha = 0
+        clickImageLabel.alpha = 0
         
         
         
@@ -39,7 +41,7 @@ class ViewController: UIViewController {
         }
     }
 
-
+/*
     @IBAction func viewFullImageTapped(sender: AnyObject) {
         UIView.animateWithDuration(0.5, animations: {
             self.bannerLabel.alpha = 0
@@ -53,16 +55,56 @@ class ViewController: UIViewController {
             self.showTextButton.alpha = 1
         })
     }
+*/
+
     @IBAction func showTextButtonTapped(sender: AnyObject) {
         UIView.animateWithDuration(0.5, animations: {
-        self.bannerLabel.alpha = 1
-        self.titleLabel.alpha = 1
-        self.infoTextview.alpha = 1
-        self.podLabel.alpha = 1
-        self.viewFullImageButton.alpha = 1
-        self.showTextButton.alpha = 0
+            self.bannerLabel.alpha = 0
+            self.titleLabel.alpha = 0
+            self.infoTextview.alpha = 0
+            self.podLabel.alpha = 0
+            self.showTextButton.alpha = 0
         })
+        
+        UIView.animateWithDuration(0.75, delay: 1.0, options:.CurveEaseIn, animations: {
+            self.clickImageLabel.alpha = 1
+            self.clickImageLabel.alpha = 0
+            
+        }) { (Bool) in
+        }
+        
+        self.imageFromToday.userInteractionEnabled = true
+        //now you need a tap gesture recognizer
+        //note that target and action point to what happens when the action is recognized.
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: Selector("imageTapped:"))
+        //Add the recognizer to your view.
+        imageFromToday.addGestureRecognizer(tapRecognizer)
     }
+    
+    func imageTapped(gestureRecognizer: UITapGestureRecognizer) {
+        //tappedImageView will be the image view that was tapped.
+        //dismiss it, animate it off screen, whatever.
+        UIView.animateWithDuration(0.5, animations: {
+            self.bannerLabel.alpha = 1
+            self.titleLabel.alpha = 1
+            self.infoTextview.alpha = 1
+            self.podLabel.alpha = 1
+            self.showTextButton.alpha = 1
+        })
+        let tappedImageView = gestureRecognizer.view!
+    }
+    
+/*
+ @IBAction func showTextButtonTapped(sender: AnyObject) {
+ UIView.animateWithDuration(0.5, animations: {
+ self.bannerLabel.alpha = 1
+ self.titleLabel.alpha = 1
+ self.infoTextview.alpha = 1
+ self.podLabel.alpha = 1
+ self.viewFullImageButton.alpha = 1
+ self.showTextButton.alpha = 0
+ })
+ }*/
     func updateMainPhoto(pictureURL: NSURL) {
         let pictureData = NSData(contentsOfURL: pictureURL)
         imageFromToday.image = UIImage(data: pictureData!)
@@ -74,10 +116,11 @@ class ViewController: UIViewController {
     
     func updateInfoText(infoTextString:String) {
         infoTextview.text = infoTextString
-        self.viewFullImageButton.alpha = 1
-//        infoTextview.layer.borderColor = UIColor.grayColor().CGColor
-//        infoTextview.layer.borderWidth = 2
-//        infoTextview.layer.cornerRadius = 3.0
+        self.showTextButton.alpha = 1
+        self.showTextButton.layer.borderWidth = 2
+        self.showTextButton.layer.borderColor = self.showTextButton.titleLabel?.textColor.CGColor
+        self.showTextButton.layer.cornerRadius = 15
+//        self.viewFullImageButton.alpha = 1
     }
     
     

@@ -14,9 +14,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var bannerLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var infoTextview: UITextView!
-
+    @IBOutlet weak var viewFullImageButton: UIButton!
+    @IBOutlet weak var podLabel: UILabel!
+    
+    @IBOutlet weak var showTextButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewFullImageButton.alpha = 0
+        self.showTextButton.alpha = 0
+        
+        
         
         getPicture { (pictureDict) in
             print(pictureDict)
@@ -29,9 +36,33 @@ class ViewController: UIViewController {
             self.performSelectorOnMainThread(#selector(ViewController.updateMainPhoto(_:)), withObject: pictureURL, waitUntilDone: true)
             self.performSelectorOnMainThread(#selector(ViewController.updateTitleLabel(_:)), withObject: titleString, waitUntilDone: true)
             self.performSelectorOnMainThread(#selector(ViewController.updateInfoText(_:)), withObject: infoString, waitUntilDone: true)
-        } 
+        }
     }
 
+
+    @IBAction func viewFullImageTapped(sender: AnyObject) {
+        UIView.animateWithDuration(1, animations: {
+            self.bannerLabel.alpha = 0
+            self.titleLabel.alpha = 0
+            self.infoTextview.alpha = 0
+            self.podLabel.alpha = 0
+            self.viewFullImageButton.alpha = 0
+//            self.showTextButton.layer.borderWidth = 3
+//            self.showTextButton.layer.borderColor = self.showTextButton.titleLabel?.textColor.CGColor
+//            self.showTextButton.layer.cornerRadius = 15
+            self.showTextButton.alpha = 1
+        })
+    }
+    @IBAction func showTextButtonTapped(sender: AnyObject) {
+        UIView.animateWithDuration(1, animations: {
+        self.bannerLabel.alpha = 1
+        self.titleLabel.alpha = 1
+        self.infoTextview.alpha = 1
+        self.podLabel.alpha = 1
+        self.viewFullImageButton.alpha = 1
+        self.showTextButton.alpha = 0
+        })
+    }
     func updateMainPhoto(pictureURL: NSURL) {
         let pictureData = NSData(contentsOfURL: pictureURL)
         imageFromToday.image = UIImage(data: pictureData!)
@@ -43,6 +74,7 @@ class ViewController: UIViewController {
     
     func updateInfoText(infoTextString:String) {
         infoTextview.text = infoTextString
+        self.viewFullImageButton.alpha = 1
 //        infoTextview.layer.borderColor = UIColor.grayColor().CGColor
 //        infoTextview.layer.borderWidth = 2
 //        infoTextview.layer.cornerRadius = 3.0

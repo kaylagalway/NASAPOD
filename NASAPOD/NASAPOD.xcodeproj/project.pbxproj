@@ -1,560 +1,1253 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		CDE634F21CD1A33300A9088F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE634F11CD1A33300A9088F /* AppDelegate.swift */; };
-		CDE634F41CD1A33300A9088F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE634F31CD1A33300A9088F /* ViewController.swift */; };
-		CDE634F71CD1A33300A9088F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDE634F51CD1A33300A9088F /* Main.storyboard */; };
-		CDE634F91CD1A33300A9088F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDE634F81CD1A33300A9088F /* Assets.xcassets */; };
-		CDE634FC1CD1A33300A9088F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDE634FA1CD1A33300A9088F /* LaunchScreen.storyboard */; };
-		CDE635071CD1A33300A9088F /* NASAPODTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE635061CD1A33300A9088F /* NASAPODTests.swift */; };
-		CDE635121CD1A33300A9088F /* NASAPODUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE635111CD1A33300A9088F /* NASAPODUITests.swift */; };
-		CDE635251CD1A5A100A9088F /* KGPODDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE635241CD1A5A100A9088F /* KGPODDataSource.swift */; };
-		CDE635271CD1A5AE00A9088F /* KGPODAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE635261CD1A5AE00A9088F /* KGPODAPI.swift */; };
-		CDE635291CD1AA3B00A9088F /* KGPODInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE635281CD1AA3B00A9088F /* KGPODInfo.swift */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		CDE635031CD1A33300A9088F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CDE634E61CD1A33300A9088F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CDE634ED1CD1A33300A9088F;
-			remoteInfo = NASAPOD;
-		};
-		CDE6350E1CD1A33300A9088F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CDE634E61CD1A33300A9088F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CDE634ED1CD1A33300A9088F;
-			remoteInfo = NASAPOD;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		CDE634EE1CD1A33300A9088F /* NASAPOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASAPOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CDE634F11CD1A33300A9088F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CDE634F31CD1A33300A9088F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CDE634F61CD1A33300A9088F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CDE634F81CD1A33300A9088F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CDE634FB1CD1A33300A9088F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CDE634FD1CD1A33300A9088F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDE635021CD1A33300A9088F /* NASAPODTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NASAPODTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CDE635061CD1A33300A9088F /* NASAPODTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAPODTests.swift; sourceTree = "<group>"; };
-		CDE635081CD1A33300A9088F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDE6350D1CD1A33300A9088F /* NASAPODUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NASAPODUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CDE635111CD1A33300A9088F /* NASAPODUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAPODUITests.swift; sourceTree = "<group>"; };
-		CDE635131CD1A33300A9088F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDE635241CD1A5A100A9088F /* KGPODDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KGPODDataSource.swift; sourceTree = "<group>"; };
-		CDE635261CD1A5AE00A9088F /* KGPODAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KGPODAPI.swift; sourceTree = "<group>"; };
-		CDE635281CD1AA3B00A9088F /* KGPODInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KGPODInfo.swift; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		CDE634EB1CD1A33300A9088F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CDE634FF1CD1A33300A9088F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CDE6350A1CD1A33300A9088F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		CDE634E51CD1A33300A9088F = {
-			isa = PBXGroup;
-			children = (
-				CDE634F01CD1A33300A9088F /* NASAPOD */,
-				CDE635051CD1A33300A9088F /* NASAPODTests */,
-				CDE635101CD1A33300A9088F /* NASAPODUITests */,
-				CDE634EF1CD1A33300A9088F /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		CDE634EF1CD1A33300A9088F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CDE634EE1CD1A33300A9088F /* NASAPOD.app */,
-				CDE635021CD1A33300A9088F /* NASAPODTests.xctest */,
-				CDE6350D1CD1A33300A9088F /* NASAPODUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		CDE634F01CD1A33300A9088F /* NASAPOD */ = {
-			isa = PBXGroup;
-			children = (
-				CDE634F11CD1A33300A9088F /* AppDelegate.swift */,
-				CDE6351F1CD1A4E300A9088F /* APIClients */,
-				CDE635201CD1A51600A9088F /* DataSources */,
-				CDE635231CD1A55700A9088F /* Models */,
-				CDE635221CD1A54000A9088F /* StoryboardFiles */,
-				CDE635211CD1A53400A9088F /* ViewControllers */,
-				CDE634F51CD1A33300A9088F /* Main.storyboard */,
-				CDE634F81CD1A33300A9088F /* Assets.xcassets */,
-				CDE634FA1CD1A33300A9088F /* LaunchScreen.storyboard */,
-				CDE634FD1CD1A33300A9088F /* Info.plist */,
-			);
-			path = NASAPOD;
-			sourceTree = "<group>";
-		};
-		CDE635051CD1A33300A9088F /* NASAPODTests */ = {
-			isa = PBXGroup;
-			children = (
-				CDE635061CD1A33300A9088F /* NASAPODTests.swift */,
-				CDE635081CD1A33300A9088F /* Info.plist */,
-			);
-			path = NASAPODTests;
-			sourceTree = "<group>";
-		};
-		CDE635101CD1A33300A9088F /* NASAPODUITests */ = {
-			isa = PBXGroup;
-			children = (
-				CDE635111CD1A33300A9088F /* NASAPODUITests.swift */,
-				CDE635131CD1A33300A9088F /* Info.plist */,
-			);
-			path = NASAPODUITests;
-			sourceTree = "<group>";
-		};
-		CDE6351F1CD1A4E300A9088F /* APIClients */ = {
-			isa = PBXGroup;
-			children = (
-				CDE635261CD1A5AE00A9088F /* KGPODAPI.swift */,
-			);
-			name = APIClients;
-			sourceTree = "<group>";
-		};
-		CDE635201CD1A51600A9088F /* DataSources */ = {
-			isa = PBXGroup;
-			children = (
-				CDE635241CD1A5A100A9088F /* KGPODDataSource.swift */,
-			);
-			name = DataSources;
-			sourceTree = "<group>";
-		};
-		CDE635211CD1A53400A9088F /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				CDE634F31CD1A33300A9088F /* ViewController.swift */,
-			);
-			name = ViewControllers;
-			sourceTree = "<group>";
-		};
-		CDE635221CD1A54000A9088F /* StoryboardFiles */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = StoryboardFiles;
-			sourceTree = "<group>";
-		};
-		CDE635231CD1A55700A9088F /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				CDE635281CD1AA3B00A9088F /* KGPODInfo.swift */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		CDE634ED1CD1A33300A9088F /* NASAPOD */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CDE635161CD1A33300A9088F /* Build configuration list for PBXNativeTarget "NASAPOD" */;
-			buildPhases = (
-				CDE634EA1CD1A33300A9088F /* Sources */,
-				CDE634EB1CD1A33300A9088F /* Frameworks */,
-				CDE634EC1CD1A33300A9088F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = NASAPOD;
-			productName = NASAPOD;
-			productReference = CDE634EE1CD1A33300A9088F /* NASAPOD.app */;
-			productType = "com.apple.product-type.application";
-		};
-		CDE635011CD1A33300A9088F /* NASAPODTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CDE635191CD1A33300A9088F /* Build configuration list for PBXNativeTarget "NASAPODTests" */;
-			buildPhases = (
-				CDE634FE1CD1A33300A9088F /* Sources */,
-				CDE634FF1CD1A33300A9088F /* Frameworks */,
-				CDE635001CD1A33300A9088F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CDE635041CD1A33300A9088F /* PBXTargetDependency */,
-			);
-			name = NASAPODTests;
-			productName = NASAPODTests;
-			productReference = CDE635021CD1A33300A9088F /* NASAPODTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		CDE6350C1CD1A33300A9088F /* NASAPODUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CDE6351C1CD1A33300A9088F /* Build configuration list for PBXNativeTarget "NASAPODUITests" */;
-			buildPhases = (
-				CDE635091CD1A33300A9088F /* Sources */,
-				CDE6350A1CD1A33300A9088F /* Frameworks */,
-				CDE6350B1CD1A33300A9088F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CDE6350F1CD1A33300A9088F /* PBXTargetDependency */,
-			);
-			name = NASAPODUITests;
-			productName = NASAPODUITests;
-			productReference = CDE6350D1CD1A33300A9088F /* NASAPODUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		CDE634E61CD1A33300A9088F /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = edu.self;
-				TargetAttributes = {
-					CDE634ED1CD1A33300A9088F = {
-						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 4WHCWF2WQ4;
-					};
-					CDE635011CD1A33300A9088F = {
-						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 4WHCWF2WQ4;
-						TestTargetID = CDE634ED1CD1A33300A9088F;
-					};
-					CDE6350C1CD1A33300A9088F = {
-						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 4WHCWF2WQ4;
-						TestTargetID = CDE634ED1CD1A33300A9088F;
-					};
-				};
-			};
-			buildConfigurationList = CDE634E91CD1A33300A9088F /* Build configuration list for PBXProject "NASAPOD" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = CDE634E51CD1A33300A9088F;
-			productRefGroup = CDE634EF1CD1A33300A9088F /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				CDE634ED1CD1A33300A9088F /* NASAPOD */,
-				CDE635011CD1A33300A9088F /* NASAPODTests */,
-				CDE6350C1CD1A33300A9088F /* NASAPODUITests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		CDE634EC1CD1A33300A9088F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CDE634FC1CD1A33300A9088F /* LaunchScreen.storyboard in Resources */,
-				CDE634F91CD1A33300A9088F /* Assets.xcassets in Resources */,
-				CDE634F71CD1A33300A9088F /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CDE635001CD1A33300A9088F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CDE6350B1CD1A33300A9088F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		CDE634EA1CD1A33300A9088F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CDE635271CD1A5AE00A9088F /* KGPODAPI.swift in Sources */,
-				CDE635251CD1A5A100A9088F /* KGPODDataSource.swift in Sources */,
-				CDE634F41CD1A33300A9088F /* ViewController.swift in Sources */,
-				CDE634F21CD1A33300A9088F /* AppDelegate.swift in Sources */,
-				CDE635291CD1AA3B00A9088F /* KGPODInfo.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CDE634FE1CD1A33300A9088F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CDE635071CD1A33300A9088F /* NASAPODTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CDE635091CD1A33300A9088F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CDE635121CD1A33300A9088F /* NASAPODUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CDE635041CD1A33300A9088F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CDE634ED1CD1A33300A9088F /* NASAPOD */;
-			targetProxy = CDE635031CD1A33300A9088F /* PBXContainerItemProxy */;
-		};
-		CDE6350F1CD1A33300A9088F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CDE634ED1CD1A33300A9088F /* NASAPOD */;
-			targetProxy = CDE6350E1CD1A33300A9088F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		CDE634F51CD1A33300A9088F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CDE634F61CD1A33300A9088F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		CDE634FA1CD1A33300A9088F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CDE634FB1CD1A33300A9088F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		CDE635141CD1A33300A9088F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		CDE635151CD1A33300A9088F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		CDE635171CD1A33300A9088F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = NASAPOD/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.self.NASAPOD;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		CDE635181CD1A33300A9088F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = NASAPOD/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.self.NASAPOD;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		CDE6351A1CD1A33300A9088F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = NASAPODTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.self.NASAPODTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NASAPOD.app/NASAPOD";
-			};
-			name = Debug;
-		};
-		CDE6351B1CD1A33300A9088F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = NASAPODTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.self.NASAPODTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NASAPOD.app/NASAPOD";
-			};
-			name = Release;
-		};
-		CDE6351D1CD1A33300A9088F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = NASAPODUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.self.NASAPODUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = NASAPOD;
-			};
-			name = Debug;
-		};
-		CDE6351E1CD1A33300A9088F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = NASAPODUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.self.NASAPODUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = NASAPOD;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		CDE634E91CD1A33300A9088F /* Build configuration list for PBXProject "NASAPOD" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CDE635141CD1A33300A9088F /* Debug */,
-				CDE635151CD1A33300A9088F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CDE635161CD1A33300A9088F /* Build configuration list for PBXNativeTarget "NASAPOD" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CDE635171CD1A33300A9088F /* Debug */,
-				CDE635181CD1A33300A9088F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		CDE635191CD1A33300A9088F /* Build configuration list for PBXNativeTarget "NASAPODTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CDE6351A1CD1A33300A9088F /* Debug */,
-				CDE6351B1CD1A33300A9088F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		CDE6351C1CD1A33300A9088F /* Build configuration list for PBXNativeTarget "NASAPODUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CDE6351D1CD1A33300A9088F /* Debug */,
-				CDE6351E1CD1A33300A9088F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = CDE634E61CD1A33300A9088F /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>0B440947C2D9C9680204A069</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-NASAPOD/Pods-NASAPOD-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>342AB6BC03C8108BA47044E6</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods_NASAPOD.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>39296796038C857864AB04AF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>342AB6BC03C8108BA47044E6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6416C65D1090D4D30725888B</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>810C11CAE971EB70BA050E06</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-NASAPOD.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-NASAPOD/Pods-NASAPOD.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>82AAD518DF1C5530F4228983</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>810C11CAE971EB70BA050E06</string>
+				<string>D725B59BCB5AAD77DB3597EE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CC6740BDFCB998D6F36C5C56</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-NASAPOD/Pods-NASAPOD-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>CDE634E51CD1A33300A9088F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CDE634F01CD1A33300A9088F</string>
+				<string>CDE635051CD1A33300A9088F</string>
+				<string>CDE635101CD1A33300A9088F</string>
+				<string>CDE634EF1CD1A33300A9088F</string>
+				<string>82AAD518DF1C5530F4228983</string>
+				<string>39296796038C857864AB04AF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDE634E61CD1A33300A9088F</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0730</string>
+				<key>LastUpgradeCheck</key>
+				<string>0730</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>edu.self</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>CDE634ED1CD1A33300A9088F</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.3</string>
+						<key>DevelopmentTeam</key>
+						<string>4WHCWF2WQ4</string>
+					</dict>
+					<key>CDE635011CD1A33300A9088F</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.3</string>
+						<key>DevelopmentTeam</key>
+						<string>4WHCWF2WQ4</string>
+						<key>TestTargetID</key>
+						<string>CDE634ED1CD1A33300A9088F</string>
+					</dict>
+					<key>CDE6350C1CD1A33300A9088F</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.3</string>
+						<key>DevelopmentTeam</key>
+						<string>4WHCWF2WQ4</string>
+						<key>TestTargetID</key>
+						<string>CDE634ED1CD1A33300A9088F</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>CDE634E91CD1A33300A9088F</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>CDE634E51CD1A33300A9088F</string>
+			<key>productRefGroup</key>
+			<string>CDE634EF1CD1A33300A9088F</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>CDE634ED1CD1A33300A9088F</string>
+				<string>CDE635011CD1A33300A9088F</string>
+				<string>CDE6350C1CD1A33300A9088F</string>
+			</array>
+		</dict>
+		<key>CDE634E91CD1A33300A9088F</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>CDE635141CD1A33300A9088F</string>
+				<string>CDE635151CD1A33300A9088F</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>CDE634EA1CD1A33300A9088F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>CDE635271CD1A5AE00A9088F</string>
+				<string>CDE635251CD1A5A100A9088F</string>
+				<string>CDE634F41CD1A33300A9088F</string>
+				<string>CDE634F21CD1A33300A9088F</string>
+				<string>CDE635291CD1AA3B00A9088F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>CDE634EB1CD1A33300A9088F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>DBFBC63F2833C130610B9F99</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>CDE634EC1CD1A33300A9088F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>CDE634FC1CD1A33300A9088F</string>
+				<string>CDE634F91CD1A33300A9088F</string>
+				<string>CDE634F71CD1A33300A9088F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>CDE634ED1CD1A33300A9088F</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>CDE635161CD1A33300A9088F</string>
+			<key>buildPhases</key>
+			<array>
+				<string>6416C65D1090D4D30725888B</string>
+				<string>CDE634EA1CD1A33300A9088F</string>
+				<string>CDE634EB1CD1A33300A9088F</string>
+				<string>CDE634EC1CD1A33300A9088F</string>
+				<string>0B440947C2D9C9680204A069</string>
+				<string>CC6740BDFCB998D6F36C5C56</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>NASAPOD</string>
+			<key>productName</key>
+			<string>NASAPOD</string>
+			<key>productReference</key>
+			<string>CDE634EE1CD1A33300A9088F</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>CDE634EE1CD1A33300A9088F</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>NASAPOD.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>CDE634EF1CD1A33300A9088F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CDE634EE1CD1A33300A9088F</string>
+				<string>CDE635021CD1A33300A9088F</string>
+				<string>CDE6350D1CD1A33300A9088F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDE634F01CD1A33300A9088F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CDE634F11CD1A33300A9088F</string>
+				<string>CDE6351F1CD1A4E300A9088F</string>
+				<string>CDE635201CD1A51600A9088F</string>
+				<string>CDE635231CD1A55700A9088F</string>
+				<string>CDE635221CD1A54000A9088F</string>
+				<string>CDE635211CD1A53400A9088F</string>
+				<string>CDE634F51CD1A33300A9088F</string>
+				<string>CDE634F81CD1A33300A9088F</string>
+				<string>CDE634FA1CD1A33300A9088F</string>
+				<string>CDE634FD1CD1A33300A9088F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>NASAPOD</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDE634F11CD1A33300A9088F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AppDelegate.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDE634F21CD1A33300A9088F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CDE634F11CD1A33300A9088F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CDE634F31CD1A33300A9088F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDE634F41CD1A33300A9088F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CDE634F31CD1A33300A9088F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CDE634F51CD1A33300A9088F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CDE634F61CD1A33300A9088F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDE634F61CD1A33300A9088F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDE634F71CD1A33300A9088F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CDE634F51CD1A33300A9088F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CDE634F81CD1A33300A9088F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Assets.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDE634F91CD1A33300A9088F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CDE634F81CD1A33300A9088F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CDE634FA1CD1A33300A9088F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CDE634FB1CD1A33300A9088F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDE634FB1CD1A33300A9088F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDE634FC1CD1A33300A9088F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CDE634FA1CD1A33300A9088F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CDE634FD1CD1A33300A9088F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDE634FE1CD1A33300A9088F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>CDE635071CD1A33300A9088F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>CDE634FF1CD1A33300A9088F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>CDE635001CD1A33300A9088F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>CDE635011CD1A33300A9088F</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>CDE635191CD1A33300A9088F</string>
+			<key>buildPhases</key>
+			<array>
+				<string>CDE634FE1CD1A33300A9088F</string>
+				<string>CDE634FF1CD1A33300A9088F</string>
+				<string>CDE635001CD1A33300A9088F</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>CDE635041CD1A33300A9088F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>NASAPODTests</string>
+			<key>productName</key>
+			<string>NASAPODTests</string>
+			<key>productReference</key>
+			<string>CDE635021CD1A33300A9088F</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>CDE635021CD1A33300A9088F</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>NASAPODTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>CDE635031CD1A33300A9088F</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>CDE634E61CD1A33300A9088F</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>CDE634ED1CD1A33300A9088F</string>
+			<key>remoteInfo</key>
+			<string>NASAPOD</string>
+		</dict>
+		<key>CDE635041CD1A33300A9088F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>CDE634ED1CD1A33300A9088F</string>
+			<key>targetProxy</key>
+			<string>CDE635031CD1A33300A9088F</string>
+		</dict>
+		<key>CDE635051CD1A33300A9088F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CDE635061CD1A33300A9088F</string>
+				<string>CDE635081CD1A33300A9088F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>NASAPODTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDE635061CD1A33300A9088F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>NASAPODTests.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDE635071CD1A33300A9088F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CDE635061CD1A33300A9088F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CDE635081CD1A33300A9088F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDE635091CD1A33300A9088F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>CDE635121CD1A33300A9088F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>CDE6350A1CD1A33300A9088F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>CDE6350B1CD1A33300A9088F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>CDE6350C1CD1A33300A9088F</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>CDE6351C1CD1A33300A9088F</string>
+			<key>buildPhases</key>
+			<array>
+				<string>CDE635091CD1A33300A9088F</string>
+				<string>CDE6350A1CD1A33300A9088F</string>
+				<string>CDE6350B1CD1A33300A9088F</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>CDE6350F1CD1A33300A9088F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>NASAPODUITests</string>
+			<key>productName</key>
+			<string>NASAPODUITests</string>
+			<key>productReference</key>
+			<string>CDE6350D1CD1A33300A9088F</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.ui-testing</string>
+		</dict>
+		<key>CDE6350D1CD1A33300A9088F</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>NASAPODUITests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>CDE6350E1CD1A33300A9088F</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>CDE634E61CD1A33300A9088F</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>CDE634ED1CD1A33300A9088F</string>
+			<key>remoteInfo</key>
+			<string>NASAPOD</string>
+		</dict>
+		<key>CDE6350F1CD1A33300A9088F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>CDE634ED1CD1A33300A9088F</string>
+			<key>targetProxy</key>
+			<string>CDE6350E1CD1A33300A9088F</string>
+		</dict>
+		<key>CDE635101CD1A33300A9088F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CDE635111CD1A33300A9088F</string>
+				<string>CDE635131CD1A33300A9088F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>NASAPODUITests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDE635111CD1A33300A9088F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>NASAPODUITests.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDE635121CD1A33300A9088F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CDE635111CD1A33300A9088F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CDE635131CD1A33300A9088F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDE635141CD1A33300A9088F</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>CDE635151CD1A33300A9088F</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>CDE635161CD1A33300A9088F</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>CDE635171CD1A33300A9088F</string>
+				<string>CDE635181CD1A33300A9088F</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>CDE635171CD1A33300A9088F</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>810C11CAE971EB70BA050E06</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>NASAPOD/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>edu.self.NASAPOD</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>CDE635181CD1A33300A9088F</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>D725B59BCB5AAD77DB3597EE</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>NASAPOD/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>edu.self.NASAPOD</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>CDE635191CD1A33300A9088F</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>CDE6351A1CD1A33300A9088F</string>
+				<string>CDE6351B1CD1A33300A9088F</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>CDE6351A1CD1A33300A9088F</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>INFOPLIST_FILE</key>
+				<string>NASAPODTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>edu.self.NASAPODTests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/NASAPOD.app/NASAPOD</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>CDE6351B1CD1A33300A9088F</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>INFOPLIST_FILE</key>
+				<string>NASAPODTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>edu.self.NASAPODTests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/NASAPOD.app/NASAPOD</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>CDE6351C1CD1A33300A9088F</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>CDE6351D1CD1A33300A9088F</string>
+				<string>CDE6351E1CD1A33300A9088F</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>CDE6351D1CD1A33300A9088F</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>INFOPLIST_FILE</key>
+				<string>NASAPODUITests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>edu.self.NASAPODUITests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_TARGET_NAME</key>
+				<string>NASAPOD</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>CDE6351E1CD1A33300A9088F</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>INFOPLIST_FILE</key>
+				<string>NASAPODUITests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>edu.self.NASAPODUITests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_TARGET_NAME</key>
+				<string>NASAPOD</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>CDE6351F1CD1A4E300A9088F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CDE635261CD1A5AE00A9088F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>APIClients</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDE635201CD1A51600A9088F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CDE635241CD1A5A100A9088F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>DataSources</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDE635211CD1A53400A9088F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CDE634F31CD1A33300A9088F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>ViewControllers</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDE635221CD1A54000A9088F</key>
+		<dict>
+			<key>children</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>StoryboardFiles</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDE635231CD1A55700A9088F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CDE635281CD1AA3B00A9088F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Models</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDE635241CD1A5A100A9088F</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>KGPODDataSource.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDE635251CD1A5A100A9088F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CDE635241CD1A5A100A9088F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CDE635261CD1A5AE00A9088F</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>KGPODAPI.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDE635271CD1A5AE00A9088F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CDE635261CD1A5AE00A9088F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CDE635281CD1AA3B00A9088F</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>KGPODInfo.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDE635291CD1AA3B00A9088F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CDE635281CD1AA3B00A9088F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D725B59BCB5AAD77DB3597EE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-NASAPOD.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-NASAPOD/Pods-NASAPOD.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DBFBC63F2833C130610B9F99</key>
+		<dict>
+			<key>fileRef</key>
+			<string>342AB6BC03C8108BA47044E6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>CDE634E61CD1A33300A9088F</string>
+</dict>
+</plist>

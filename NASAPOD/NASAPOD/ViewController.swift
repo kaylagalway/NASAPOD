@@ -18,8 +18,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         getPicture { (pictureDict) in
             print(pictureDict)
             let pictureURLstring: String = pictureDict["url"] as! String
@@ -28,16 +26,10 @@ class ViewController: UIViewController {
             let infoString:String = pictureDict["explanation"] as! String
             print(titleString)
             
-            self.performSelectorOnMainThread("updateMainPhoto:", withObject: pictureURL, waitUntilDone: true)
-            self.performSelectorOnMainThread("updateTitleLabel:", withObject: titleString, waitUntilDone: true)
-            self.performSelectorOnMainThread("updateInfoText:", withObject: infoString, waitUntilDone: true)
+            self.performSelectorOnMainThread(#selector(ViewController.updateMainPhoto(_:)), withObject: pictureURL, waitUntilDone: true)
+            self.performSelectorOnMainThread(#selector(ViewController.updateTitleLabel(_:)), withObject: titleString, waitUntilDone: true)
+            self.performSelectorOnMainThread(#selector(ViewController.updateInfoText(_:)), withObject: infoString, waitUntilDone: true)
         }
-        
-//        var url:NSURL = NSURL.URLWithString("http://myURL/ios8.png")
-//        var data:NSData = NSData.dataWithContentsOfURL(url, options: nil, error: nil)
-//        
-//        imageView.image = UIImage.imageWithData(data)// Error here
-//        Try this imageURL.image = UIImage(data: myDataVar)
     }
 
     func updateMainPhoto(pictureURL: NSURL) {
@@ -52,6 +44,13 @@ class ViewController: UIViewController {
     func updateInfoText(infoTextString:String) {
         infoTextview.text = infoTextString
     }
+    
+    
+    //        var url:NSURL = NSURL.URLWithString("http://myURL/ios8.png")
+    //        var data:NSData = NSData.dataWithContentsOfURL(url, options: nil, error: nil)
+    //
+    //        imageView.image = UIImage.imageWithData(data)// Error here
+    //        Try this imageURL.image = UIImage(data: myDataVar)
     /*
  func updateIPLabel(text: String) {
  self.ipLabel.text = "Your IP is " + text

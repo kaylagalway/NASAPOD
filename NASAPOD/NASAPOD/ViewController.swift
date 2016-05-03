@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ImageScrollView
 
 class ViewController: UIViewController {
     
@@ -16,7 +17,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var infoTextview: UITextView!
     @IBOutlet weak var viewFullImageButton: UIButton!
     @IBOutlet weak var podLabel: UILabel!
-    
     @IBOutlet weak var savePhotoButton: UIButton!
     @IBOutlet weak var clickImageLabel: UILabel!
     @IBOutlet weak var showTextButton: UIButton!
@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         viewFullImageButton.alpha = 0
         showTextButton.alpha = 0
         clickImageLabel.alpha = 0
+        savePhotoButton.alpha = 0
         
         
         
@@ -65,7 +66,7 @@ class ViewController: UIViewController {
         self.imageFromToday.userInteractionEnabled = true
         //now you need a tap gesture recognizer
         //note that target and action point to what happens when the action is recognized.
-        let tapRecognizer = UITapGestureRecognizer(target: self, action: Selector("imageTapped:"))
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.imageTapped(_:)))
         //Add the recognizer to your view.
         imageFromToday.addGestureRecognizer(tapRecognizer)
     }
@@ -86,7 +87,7 @@ class ViewController: UIViewController {
     
     @IBAction func savePhotoButtonTapped(sender: AnyObject) {
         
-        UIImageWriteToSavedPhotosAlbum(self.imageFromToday.image!, self, Selector("image:didFinishSavingWithError:contextInfo:"), nil)
+        UIImageWriteToSavedPhotosAlbum(self.imageFromToday.image!, self, #selector(ViewController.image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
     
     func image(image: UIImage, didFinishSavingWithError error: NSErrorPointer, contextInfo: UnsafePointer<()>) {

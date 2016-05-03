@@ -11,7 +11,7 @@
 
 import Foundation
 
-struct ForesquareAPIClientConstants {
+struct NASAAPIClientConstants {
     static let baseURLString = "https://api.nasa.gov/planetary/apod?api_key="
     static let keyString = "c5Q1SgpX8R0PvMNuzg1GwnBUnU93F5SJpB6z0yB2"
 }
